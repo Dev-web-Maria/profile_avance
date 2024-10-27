@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Maria El Hattab</title>
+    <link rel="stylesheet"  href="style.css">
+    <link rel="icon"  href="icon profil.png">
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Veuillez remplir tous les champs.");
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Veuillez entrer un email valide.");
+                return false;
+            }
+
+            alert("Formulaire soumis avec succès !");
+            return true;
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div id="navbar">
+            <img src="logo.png">
+            <nav>
+                <ul>
+                    <li><a href="#A-propos-de-moi">A propos de moi</a></li>
+                    <li><a href="#Hobbies-et-Objectifs">Hobbies et Objectifs</a></li>
+                    <li><a href="#Tableau-d'Amis">Tableau d'Amis</a></li>
+                    <li><a href="#Formulaire">Formulaire</a></li>
+                </ul>
+            </nav>
+        </div>
+            <h1> El Hattab Maria</h1>
+    </header>
+
+    <main>
+        <section id="A-propos-de-moi">
+
+            <h2>À propos de moi</h2>
+
+            <div class="about-content">
+
+                <img src="photo.jpg" alt="Mon image" class="profile-image">
+
+                <p>Je m'appelle Maria El Hattab et je suis étudiante en troisième année d'ingénierie informatique et réseaux 
+                    à l'École Marocaine des Sciences de l'Ingénieur EMSI. Au cours de mon cursus, j'ai développé une solide 
+                    expertise en programmation avec des langages tels que C et C++, ainsi qu'une compréhension 
+                    des réseaux informatiques. Mes compétences en bases de données, 
+                    notamment avec MySQL, me permettent de gérer efficacement les données, tandis que mes connaissances 
+                    en développement web, incluant HTML, CSS et JavaScript, me permettent de créer des interfaces dynamiques. Grâce à ma 
+                    participation à divers projets académiques, j'ai également acquis des compétences en gestion de projet et en travail 
+                    d'équipe, renforçant ainsi ma capacité à résoudre des problèmes complexes de manière analytique et efficace.
+                </p>
+
+            </div>
+
+        </section>
+
+        
+        <section id="Hobbies-et-Objectifs">
+            <div>
+                <h2><u>Hobbies</u></h2><br>
+                <ul>
+                    <li>Programmation</li>
+                    <li>Lecture</li>
+                    <li>Voyages</li>
+                    <li>Musique</li>
+                    <li>Sports</li>
+                </ul>
+            </div>
+
+            <br><br>
+
+            <div>
+                <h2><u>Objectifs pour cette année</u></h2><br>
+                <ol>
+                    <li>Réussir mes études</li>
+                    <p>Obtenir mon diplôme avec de bonnes notes pour ouvrir des opportunités professionnelles</p><br>
+    
+                    <li>Élargir mon réseau </li>
+                    <p>Participer à des événements et des conférences pour rencontrer des professionnels du secteur</p><br>
+    
+                    <li>Acquérir de nouvelles compétences</li>
+                    <p>Apprendre de nouvelles langages de programmations et developper mes hardskills et softskills</p><br>
+    
+                    <li>Découvrir plus le domaine de l'IA</li>
+                    <p>Suivre des cours en ligne pour approfondir mes connaissances en intelligence artificielle</p><br>
+    
+                    <li>Contribuer à des projets open source</li>
+                    <p> Participer à des projets collaboratifs pour améliorer mes compétences et donner en retour à la communauté</p><br>
+    
+                    <li>Participer à des stages dans des entreprises innovantes.</li>
+                    <p>Chercher des stages dans des entreprises innovantes pour gagner de l'expérience pratique</p><br>
+                </ol>
+            </div>
+           
+        </section>
+    
+        <section id="Tableau-d'Amis">
+            <h2>Tableau d'Amis</h2>
+            <br><br><br>
+            <table>
+                <tr>
+                    <th>Nom et Prenom</th>
+                    <th>Âge</th>
+                    <th>Ville</th>
+                    <th>Profil</th>
+                </tr>
+                <tr>
+                    <td>Kachchaf Sara</td>
+                    <td>20</td>
+                    <td>Essaouira</td>
+                    <td><a href="https://example.com/sara">Profil de Sara</a></td>
+                </tr>
+                <tr>
+                    <td>Idar Maha</td>
+                    <td>21</td>
+                    <td>Agadir</td>
+                    <td><a href="https://example.com/maha">Profil de Maha</a></td>
+                </tr>
+                <tr>
+                    <td>Alaoui Drai Zineb </td>
+                    <td>20</td>
+                    <td>Fes</td>
+                    <td><a href="https://example.com/zineb">Profil de Zineb</a></td>
+                </tr>
+
+                <tr>
+                    <td>Chaouki Ghita</td>
+                    <td>20</td>
+                    <td>Casablanca</td>
+                    <td><a href="https://example.com/ghita">Profil de Ghita</a></td>
+                </tr>
+
+            </table>
+        </section>
+    
+        <section id="Formulaire">
+            <h2>Formulaire de Contact</h2>
+            <form onsubmit="return validateForm()">
+                <label for="name">Nom et prenom:</label>
+                <input type="text" id="name" required placeholder="Nom et Prenom">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Email">
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" required placeholder="Laissez moi un message"></textarea>
+                <br>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+    </main>
+</body>
